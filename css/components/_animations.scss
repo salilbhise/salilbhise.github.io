@@ -1,0 +1,61 @@
+// Animations
+@keyframes shift {
+	0%, 40%, 44%, 58%, 61%, 65%,69%,73%,100% {
+		opacity: 0;
+		transform: translateY(0%);
+	}
+	
+	59% {
+		opacity: 0.05;
+	}
+	60% {
+		opacity: 0.05;
+	}
+	70% {
+		opacity: 0.05;
+		transform: translateY(50%);
+	}
+	71% {
+		opacity: 0.05;
+	}
+}
+
+@keyframes pullUp {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: translate3d(0,-100%,0);
+  }
+}
+
+@keyframes pullDown {
+  from {
+    transform: translate3d(0,-100%,0);
+  }
+
+  to {
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes pullUpBottom {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: translate3d(0,100%,0);
+  }
+}
+
+@keyframes pullDownBottom {
+  from {
+    transform: translate3d(0,100%,0);
+  }
+
+  to {
+    transform: translate3d(0,0,0);
+  }
+}

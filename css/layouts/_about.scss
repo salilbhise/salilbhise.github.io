@@ -1,0 +1,222 @@
+.about {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	overflow-y: scroll;
+
+	&.idle {
+		pointer-events: none;
+		top: -100%;
+		-webkit-animation-name: pullUp;
+						animation-name: pullUp;
+		-webkit-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+		   -moz-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+		   	-ms-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+		   	 -o-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+						transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+	}
+
+	&.active-screen {
+		top: 0;
+		-webkit-animation-name: pullDown;
+						animation-name: pullDown;
+		-webkit-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+		   -moz-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+		   	-ms-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+		   	 -o-transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+						transition: top .5s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+
+		.close-button {
+			opacity: 1;
+			bottom: ds-rem-calc(40);
+
+			&:hover {
+				opacity: 1;
+				bottom: ds-rem-calc(30);
+			}
+		}
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		&__box {
+			margin-top: ds-rem-calc(45);
+
+			@include ds-breakpoint(medium) {
+				margin-top: ds-rem-calc(65);
+			}
+
+			@include ds-breakpoint(large) {
+				margin-top: ds-rem-calc(90);
+			}
+
+			.social {
+				list-style: none;
+				margin: ds-rem-calc(20) 0 0;
+				padding: 0;
+
+				@include ds-breakpoint(medium) {
+					margin-top: ds-rem-calc(25);
+				}
+
+				@include ds-breakpoint(large) {
+					margin-top: ds-rem-calc(35);
+				}
+
+				li {
+					color: $light;
+					display: inline-block;
+					
+					&:after {
+						font-size: ds-rem-calc(9);
+						content: "/";
+						display: inline-block;
+						margin-left: ds-rem-calc(5);
+						vertical-align: middle;
+					}
+					
+					&:last-of-type {
+						&:after {
+							display: none;
+						}
+					}
+
+					a {
+						display: inline-block;
+						overflow: hidden;
+						color: $light;
+						font-size: ds-rem-calc(12);
+						line-height: ds-rem-calc(16);
+						height: ds-rem-calc(18);
+						vertical-align: middle;
+
+						span {
+							position: relative;
+							display: inline-block;
+							transition: transform .4s cubic-bezier(0.85, 0.135, 0.15, 0.5);
+
+							&:before {
+								position: absolute;
+								top: 200%;
+								content: attr(data-hover);
+								transform: translate3d(0,0,0);
+								font-size: ds-rem-calc(12);
+								line-height: ds-rem-calc(16);
+								color: $black;
+							}
+						}
+
+						&:hover, &:focus {
+							opacity: 1;
+							span {
+								transform: translateY(-200%);
+							}
+						}
+					}
+				}
+			}
+
+			.services {
+				list-style: none;
+				margin: ds-rem-calc(20) 0 0;
+				padding: 0;
+
+				@include ds-breakpoint(medium) {
+					margin-top: ds-rem-calc(25);
+				}
+
+				@include ds-breakpoint(large) {
+					margin-top: ds-rem-calc(35);
+				}
+
+				li {
+					margin-bottom: ds-rem-calc(10);
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+					p {
+						font-size: ds-rem-calc(20);
+					}
+				}
+			}
+
+			&.last {
+				margin-bottom: ds-rem-calc(100);
+
+				@include ds-breakpoint(medium) {
+					margin-bottom: ds-rem-calc(120);
+				}
+
+				@include ds-breakpoint(large) {
+					margin-bottom: ds-rem-calc(150);
+				}
+			}
+
+			&.first {
+				margin-top: ds-rem-calc(90);
+
+				@include ds-breakpoint(medium) {
+					margin-top: ds-rem-calc(90);
+				}
+
+				@include ds-breakpoint(large) {
+					margin-top: ds-rem-calc(120);
+				}
+			}
+		}
+
+		&__full-box {
+			width: 100%;
+			background: $accent;
+			margin-top: ds-rem-calc(45);
+			padding-top: ds-rem-calc(45);
+			padding-bottom: ds-rem-calc(45);
+
+			@include ds-breakpoint(medium) {
+				margin-top: ds-rem-calc(65);
+				padding-top: ds-rem-calc(65);
+				padding-bottom: ds-rem-calc(65);
+			}
+
+			@include ds-breakpoint(large) {
+				margin-top: ds-rem-calc(90);
+				padding-top: ds-rem-calc(90);
+				padding-bottom: ds-rem-calc(90);
+			}
+
+			.client-list {
+				width: 100%;
+				text-align: center;
+				list-style: none;
+				margin: ds-rem-calc(40) 0 0;
+				padding: 0;
+
+				@include ds-breakpoint(medium) {
+					margin: ds-rem-calc(20) 0 0;
+				}
+
+				li {
+					margin: ds-rem-calc(30) 0;
+					display: block;
+
+					@include ds-breakpoint(medium) {
+						display: inline-block;
+						margin: ds-rem-calc(30) ds-rem-calc(15);
+					}
+
+					img {
+						max-width: 109px;
+
+						@include ds-breakpoint(medium) {
+							max-width: 139px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

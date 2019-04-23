@@ -1,0 +1,169 @@
+// Setup
+*,
+*:before,
+*:after {
+  @include ds-box-sizing(border-box);
+}
+
+body {
+  background: $ds-color-background;
+  font-family: $ds-font-family;
+  font-weight: $ds-font-weight;
+  color: $ds-color-text;
+  font-size: $ds-font-size-body-copy;
+  font-style: $ds-font-style;
+  line-height: $ds-line-height;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: $ds-font-smoothing;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// Type
+a,
+a:active {
+  color: $black;
+  text-decoration: none;
+
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+  opacity: .5;
+}
+
+a:link {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255,255,255,.7);
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus {
+  color: inherit;
+}
+
+.underline {
+  padding: ds-rem-calc(10) 0;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 100% ds-rem-calc(1.5);
+  background-position: center bottom 29%;
+  background-origin: padding-box;
+  text-shadow: ds-rem-calc(3) 0 #fff, ds-rem-calc(2) 0 #fff, ds-rem-calc(1) 0 #fff, - ds-rem-calc(1) 0 #fff, - ds-rem-calc(2) 0 #fff, - ds-rem-calc(3) 0 #fff;
+}
+
+%h1-6 {
+  font-family: $ds-headings-font-family;
+  line-height: $ds-headings-line-height;
+  font-weight: $ds-font-weight;
+  font-style: $ds-font-style;
+  margin: 1rem 0;
+  letter-spacing: 0.07em;
+}
+
+%h1 {
+  @extend %h1-6;
+  font-size: $ds-h1-font-size;
+  letter-spacing: 0.01em;
+
+  @include ds-breakpoint(medium) {
+    font-size: $ds-h1-font-size-tablet;
+  }
+
+  @include ds-breakpoint(large) {
+    font-size: $ds-h1-font-size-laptop;
+  }
+}
+h1 {
+  @extend %h1;
+}
+
+%h2 {
+  @extend %h1-6;
+  font-size: $ds-h2-font-size;
+
+  @include ds-breakpoint(medium) {
+    font-size: $ds-h2-font-size-tablet;
+  }
+
+  @include ds-breakpoint(large) {
+    font-size: $ds-h2-font-size-laptop;
+  }
+}
+h2 {
+  @extend %h2;
+}
+
+%h3 {
+  @extend %h1-6;
+  font-size: $ds-h3-font-size;
+
+  @include ds-breakpoint(medium) {
+    font-size: $ds-h4-font-size-tablet;
+  }
+
+  @include ds-breakpoint(large) {
+    font-size: $ds-h4-font-size-laptop;
+  }
+}
+h3 {
+  @extend %h3;
+}
+
+%h4 {
+  @extend %h1-6;
+  font-family: $ds-font-family;
+  font-size: $ds-h4-font-size;
+  letter-spacing: 0;
+
+  @include ds-breakpoint(medium) {
+    font-size: $ds-h4-font-size-tablet;
+  }
+
+  @include ds-breakpoint(large) {
+    font-size: $ds-h4-font-size-laptop;
+  }
+}
+h4 {
+  @extend %h4;
+}
+
+%h5 {
+  @extend %h1-6;
+  font-family: $ds-font-family;
+  color: $light;
+  font-size: $ds-h5-font-size;
+  letter-spacing: 0;
+
+  @include ds-breakpoint(medium) {
+    font-size: $ds-h5-font-size-tablet;
+  }
+
+  @include ds-breakpoint(large) {
+    font-size: $ds-h5-font-size-laptop;
+  }
+}
+h5 {
+  @extend %h5;
+}
+
+%h6 {
+  @extend %h1-6;
+  font-size: $ds-h6-font-size;
+}
+h6 {
+  @extend %h6;
+}

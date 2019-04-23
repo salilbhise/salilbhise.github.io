@@ -1,0 +1,12 @@
+// Directions
+$ds-float: left !default;
+$ds-float-opposite: right !default;
+$ds-text-direction: ltr !default;
+
+// Breakpoints
+$ds-breakpoints: (
+  'small'  : 576,
+  'medium' : 768px,
+  'large'  : 992px,
+  'xlarge' : 1200px
+);

@@ -1,0 +1,22 @@
+// Rem Converter
+$ds-rem-base: 16px !default;
+
+@function ds-strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+@function ds-convert-to-rem($value, $base-value: $ds-rem-base) {
+  $value: ds-strip-unit($value) / ds-strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+@function ds-rem-calc($values, $base-value: $ds-rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return ds-convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, ds-convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}

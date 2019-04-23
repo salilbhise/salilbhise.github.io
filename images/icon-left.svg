@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="13px" viewBox="0 0 7 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD---Work---Open" transform="translate(-648.000000, -1028.000000)" fill="#979797">
+            <g id="Group-4" transform="translate(637.000000, 1019.000000)">
+                <path d="M17.85425,15.14625 L11.85425,9.14625 C11.65825,8.95125 11.34225,8.95125 11.14625,9.14625 C10.95125,9.34225 10.95125,9.65825 11.14625,9.85425 L16.29325,15.00025 L16.29325,16.00025 L11.14625,21.14625 C10.95125,21.34225 10.95125,21.65825 11.14625,21.85425 C11.24425,21.95125 11.37225,22.00025 11.50025,22.00025 C11.62825,22.00025 11.75625,21.95125 11.85425,21.85425 L17.85425,15.85425 C18.04925,15.65825 18.04925,15.34225 17.85425,15.14625 Z" id="arrow-right" transform="translate(14.500250, 15.500125) scale(-1, 1) translate(-14.500250, -15.500125) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

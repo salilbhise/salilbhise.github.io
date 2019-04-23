@@ -1,0 +1,48 @@
+// Colors
+$black: #353535;
+$light: #979797;
+$accent: #E0FFFD;
+
+$white: #D9E1E9;
+$white-off: #7B8085;
+
+// Color Defaults
+$ds-color-background: white;
+$ds-color-text:				$black;
+
+// Fonts
+$ds-font-family: "Karla", "Helvetica Neue", "Helvetica", sans-serif;
+$ds-headings-font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+$ds-font-size: 100% !default;
+$ds-font-size-body-copy: ds-rem-calc(18) !default;
+$ds-font-size-medium: ds-rem-calc(14) !default;
+$ds-font-size-small: ds-rem-calc(12) !default;
+$ds-font-smoothing: antialiased !default;
+$ds-font-style: normal !default;
+$ds-font-weight: 400 !default;
+$ds-font-weight-bold: 700 !default;
+$ds-line-height: 1.45 !default;
+
+
+$ds-h1-font-size:        ds-rem-calc(36) !default;
+$ds-h1-font-size-tablet: ds-rem-calc(48);
+$ds-h1-font-size-laptop: ds-rem-calc(64);
+
+$ds-h2-font-size:        ds-rem-calc(22) !default;
+$ds-h2-font-size-tablet: ds-rem-calc(28);
+$ds-h2-font-size-laptop: ds-rem-calc(36);
+
+$ds-h3-font-size:        ds-rem-calc(18) !default;
+$ds-h3-font-size-tablet: ds-rem-calc(18);
+$ds-h3-font-size-laptop: ds-rem-calc(20);
+
+$ds-h4-font-size:        ds-rem-calc(16) !default;
+$ds-h4-font-size-tablet: ds-rem-calc(18);
+$ds-h4-font-size-laptop: ds-rem-calc(20);
+
+$ds-h5-font-size:        ds-rem-calc(13) !default;
+$ds-h5-font-size-tablet: ds-rem-calc(14);
+$ds-h5-font-size-laptop: ds-rem-calc(14);
+
+$ds-h6-font-size:        ds-rem-calc(10) !default;
+$ds-headings-line-height: 1.25 !default;

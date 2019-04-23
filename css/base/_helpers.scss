@@ -1,0 +1,40 @@
+// clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+%container {
+	position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include ds-breakpoint(small) {
+  	width: 540px;
+    max-width: 100%;
+  }
+
+  @include ds-breakpoint(medium) {
+		width: 720px;
+    max-width: 100%;
+  }
+
+  @include ds-breakpoint(large) {
+  	width: 960px;
+    max-width: 100%;
+  }
+
+  @include ds-breakpoint(xlarge) {
+  	width: 1140px;
+    max-width: 100%;
+  }
+}

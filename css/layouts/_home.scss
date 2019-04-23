@@ -1,0 +1,107 @@
+.hero {
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	background-image: radial-gradient(50% 100%, #e6e6e6 50%, #d6d6d6 100%);
+
+	&__content {
+		width: 100%;
+		padding: 0 5%;
+
+		@include ds-breakpoint(medium) {
+			padding: 0 10%;
+		}
+		text-align: center;
+
+		h1, p {
+			margin: 0;
+		}
+	}
+
+	&__three-container {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	&__object-shadow {
+		position: absolute;
+		bottom: 15%;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: .5;
+	}
+
+	&__trigger-button {
+		font-family: $ds-headings-font-family;
+		font-size: ds-rem-calc(14);
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		margin-left: -30px;
+
+		&.top {
+			top: 40px;
+			transform: rotate(270deg);
+
+			&:hover {
+				opacity: 1;
+				top: 35px;
+			}
+		}
+
+		&.bottom {
+			bottom: 40px;
+			transform: rotate(270deg);
+
+			&:hover {
+				opacity: 1;
+				bottom: 35px;
+			}
+		}
+	}
+
+	&.sphere, &.field {
+		background: #FBFFFF;
+	}
+}
+
+.hero.dark {
+	background-image: radial-gradient(50% 100%, #080808 50%, #14161B 100%);
+
+	.hero__content {
+		p, h1 {
+			color: $white;
+		}
+	}
+
+	.hero__trigger-button {
+		color: $white;
+	}
+
+	.meta.name {
+		p {
+			color: $white-off;
+		}
+	}
+
+	.meta.social {
+		a {
+			color: $white-off;
+			span {
+				&:before {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.meta.sound {
+		a {
+			background-image: url('../images/icon-sound-light.png');
+		}
+	}
+}
